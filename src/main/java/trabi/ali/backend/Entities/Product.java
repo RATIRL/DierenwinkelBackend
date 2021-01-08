@@ -4,6 +4,7 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import java.util.ArrayList;
+import java.util.Date;
 
 public class Product {
 
@@ -17,6 +18,8 @@ public class Product {
     private String description;
     private double price;
     private String category;
+    private Date datum;
+    private String afbeelding;
 
     public Product(String name, String description, double price, String category) {
         this.name = name;
@@ -80,6 +83,22 @@ public class Product {
 
     public void setCategory(String category) {
         this.category = category;
+    }
+
+    public Date getDatum() {
+        return datum;
+    }
+
+    public void setDatum(Date datum) {
+        this.datum = datum;
+    }
+
+    public String getAfbeelding() {
+        return afbeelding;
+    }
+
+    public void setAfbeelding(String afbeelding) {
+        this.afbeelding = afbeelding;
     }
 
 }
